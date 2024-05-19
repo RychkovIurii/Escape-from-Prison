@@ -304,7 +304,21 @@ namespace Prison
                 case "yard":
                     if (character.Name.ToLower() == "guard")
                     {
-                        return BribeGuard(character, player);
+                        Console.WriteLine("Do you want to give away the vodka to the guard? (yes/no)");
+                        string decision2 = Console.ReadLine().ToLower().Trim();
+                        if (decision2 == "yes")
+                        {
+                            return BribeGuard(character, player);
+                        }
+                        else if (decision2 == "no")
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid input.");
+                            return false;
+                        }
                     }
                     break;
             }
@@ -360,4 +374,3 @@ namespace Prison
         }
     }
 }
-
