@@ -34,8 +34,8 @@ namespace Prison
 
             startRoom = cell;
 
-            cell.Items.Add(new Item("Key", "\tA key hidden under the mattress, opens the door to the corridor.", 1));
-            cell.Items.Add(new Item("Cigarettes", "\tA few cigarettes hidden under the mattress.", 8));
+            cell.Items.Add(new Item("Key", "\tA key opens the door to the corridor.", 1));
+            cell.Items.Add(new Item("Cigarettes", "\tA few cigarettes. You can use them for trade.", 8));
 
             corridor.Characters.Add(new Character("Bob", "A shady looking inmate who can trade."));
             yard.Characters.Add(new Character("Guard", "A guard who loves alcohol."));
@@ -91,7 +91,8 @@ namespace Prison
 
         public void CheckForVictory(Player player)
         {
-            string youWon = @"__   __             __          __         _ 
+            string youWon = @"
+                              __   __             __          __         _ 
                               \ \ / /             \ \        / /        | |
                                \ V /___  _   _     \ \  /\  / /__  _ __ | |
                                 \ // _ \| | | |     \ \/  \/ / _ \| '_ \| |
